@@ -11,26 +11,25 @@
  */
 int main(void)
 {
-int n;
+int n, m;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
+/* Get the last digit of n using the modulo operator*/
 
-int lastDigit = n % 10;  /* Get the last digit of n using the modulo operator*/
+m = n % 10; 
+if (m > 5)
+{
+printf("Last digit of %d is %d and is greater than 5\n", n, m);
+}
+if (m == 0)
+{
+printf("Last digit of %d is %d and is 0\n", n, m);
+}
+if (m < 6 && m != 0)
+{
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, m);
+}
 
-printf("Last digit of %d is ", n);
-
-if (lastDigit > 5)
-{
-printf("Last digit of %d is %d and is greater than 5\n", n, lastDigit);
-}
-else if (lastDigit == 0)
-{
-printf("and is 0\n");
-}
-else
-{
-printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastDigit);
-}
 return (0);
 }
