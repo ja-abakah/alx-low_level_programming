@@ -9,26 +9,21 @@
  */
 int main(void)
 {
-char c;
-char d;
+char a;
 
-c = 'a';
-d = 'A';
-while
-(c = 'z')
+/* Print lowercase alphabet */
+for (a = 'a'; a <= 'z'; a++)
 {
-putchar(c);
-c++;
+putchar(a);
 }
 
-while
-(d = 'Z')
+/* Print uppercase alphabet */
+for (a = 'A'; a <= 'Z'; a++)
 {
-putchar(d);
-d++;
+putchar(a);
 }
 
-putchar("\n");
+putchar('\n');
 
 return (0);
 }
