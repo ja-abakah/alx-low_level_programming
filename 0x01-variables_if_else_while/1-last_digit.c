@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>  /* Include the necessary header for printf*/
+#include <stdio.h>  /* Include the necessary header for printf */
 
 /**
  * main - Entry point of the program
@@ -15,9 +15,9 @@ int n, m;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-/* Get the last digit of n using the modulo operator*/
+/* Get the last digit of n using the modulo operator */
 
-m = n % 10; 
+m = n % 10;
 if (m > 5)
 {
 printf("Last digit of %d is %d and is greater than 5\n", n, m);
