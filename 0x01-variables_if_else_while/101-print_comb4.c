@@ -8,19 +8,21 @@
  */
 int main(void)
 {
-int d1, d2, d3;
+int d, e, f;
 
-for (d1 = 48; d1 < 58; d1++)
+for (d = 48; d < 58; d++)
 {
-for (d2 = d1 +1 ; d2 < 58; d2++)
+for (e = 49; e < 58; e++)
 {
-for (d3 = d2 + 1; d3 < 58; d3++)
+for (f = 50; f < 58; f++)
 {
-putchar(d1);
-putchar(d2);
-putchar(d3);
+if (f > e && e > d)
+{
+putchar(d);
+putchar(e);
+putchar(f);
 
-if (d1 != 55 || d2 != 56 || d3 != 57)
+if (d != 55 || e != 56)
 {
 putchar(',');
 putchar(' ');
@@ -28,7 +30,7 @@ putchar(' ');
 }
 }
 }
-
+}
 
 putchar('\n');
 
