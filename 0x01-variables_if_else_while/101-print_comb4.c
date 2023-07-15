@@ -10,17 +10,17 @@ int main(void)
 {
 int d1, d2, d3;
 
-for (d1 = 0; d1 < 8; d1++)
+for (d1 = 48; d1 < 58; d1++)
 {
-for (d2 = d1 + 1; d2 < 9; d2++)
+for (d2 = d1 +1 ; d2 < 58; d2++)
 {
-for (d3 = d2 + 1; d3 <= 9; d3++)
+for (d3 = d2 + 1; d3 < 58; d3++)
 {
-putchar(d1 + '0');
-putchar(d2 + '0');
-putchar(d3 + '0');
+putchar(d1);
+putchar(d2);
+putchar(d3);
 
-if (d1 != 8 || d2 != 9 || d3 != 10)
+if (d1 != 55 || d2 != 56 || d3 != 57)
 {
 putchar(',');
 putchar(' ');
@@ -28,6 +28,7 @@ putchar(' ');
 }
 }
 }
+
 
 putchar('\n');
 

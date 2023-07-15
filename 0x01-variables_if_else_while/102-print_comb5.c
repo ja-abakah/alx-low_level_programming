@@ -8,22 +8,25 @@
  */
 int main(void)
 {
-int num1, num2;
+int n, m;
 
-for (num1 = 0; num1 <= 99; num1++)
+for (n = 0; n < 100; n++)
 {
-for (num2 = num1; num2 <= 99; num2++)
+for (m = 0; m < 100; m++)
 {
-putchar((num1 / 10) + '0');
-putchar((num1 % 10) + '0');
+if(n < m)
+{
+putchar((n / 10) + 48);
+putchar((m % 10) + 48);
 putchar(' ');
-putchar((num2 / 10) + '0');
-putchar((num2 % 10) + '0');
+putchar((n / 10) + 48);
+putchar((m % 10) + 48);
 
-if (num1 != 100  || num2 != 100)
+if (n != 98 || m != 99)
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
