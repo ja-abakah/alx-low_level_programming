@@ -17,6 +17,7 @@ l = -l;
 d = l % 10;
 
 if (d < 0)
+d = -d;
 _putchar(d + '0');
 
 return (d);

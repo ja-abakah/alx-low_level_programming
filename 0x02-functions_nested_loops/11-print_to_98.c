@@ -12,6 +12,7 @@
 void print_to_98(int n)
 {
 int X, Y;
+
 if (n <= 98)
 {
 for (X = n; X <= 98; X++)
@@ -22,7 +23,8 @@ printf("%d, ", X);
 else if (X == 98)
 printf("%d, ", X);
 }
-if (n >= 98)
+}
+else if (n >= 98)
 {
 for (Y = n; Y >= 98; Y++)
 {
@@ -31,7 +33,6 @@ printf("%d, ", Y);
 
 else if (Y == 98)
 printf("%d, ", Y);
-}
 }
 }
 }
