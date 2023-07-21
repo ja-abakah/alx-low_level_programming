@@ -1,10 +1,11 @@
 #include "main.h"
 
-/** _isupper - Entry point of the program
+/**
+ * _isupper - Entry point of the program
  *
  * Description: uppercase letters.
  * @c: char to checked
- * 
+ *
  * Return: 0 or 1
  */
 

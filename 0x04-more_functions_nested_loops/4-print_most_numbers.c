@@ -1,9 +1,10 @@
 #include "main.h"
 
-/** print_most_numbers - Entry point of the program
+/**
+ * print_most_numbers - Entry point of the program
  *
  * Description: print num except 2 and 4.
- * 
+ *
  * Return: void
  */
 

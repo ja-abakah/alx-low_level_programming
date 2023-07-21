@@ -1,7 +1,7 @@
 #include "main.h"
 
-/** mul - Entry point of the program
- *
+/**
+ * mul - Entry point of the program
  * Description: multiply 2 int.
  * @a: first int
  * @b: second int
@@ -12,4 +12,3 @@ int mul(int a, int b)
 {
 return (a * b);
 }
-

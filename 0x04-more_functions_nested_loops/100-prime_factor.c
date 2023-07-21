@@ -4,7 +4,8 @@
 /**
  * main - Entry point of the program
  *
- * Description: inds and prints the largest prime factor of the number 612852475143
+ * Description: inds and prints the largest prime
+ * factor of the number 612852475143
  * followed by a new line
  * @n: integer to be printed
  * Return: Always 0 (Success)

@@ -1,9 +1,10 @@
 #include "main.h"
 
-/** more_numbers - Entry point of the program
+/**
+ * more_numbers - Entry point of the program
  *
  * Description: print more numbers.
- * 
+ *
  * Return: 0 (Success)
  */
 void more_numbers(void)

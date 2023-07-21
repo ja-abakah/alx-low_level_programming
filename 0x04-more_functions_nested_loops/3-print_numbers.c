@@ -1,9 +1,10 @@
 #include "main.h"
 
-/** print_numbers - Entry point of the program
+/**
+ *print_numbers - Entry point of the program
  *
  * Description: print 0-9.
- * 
+ *
  * Return: void
  */
 
