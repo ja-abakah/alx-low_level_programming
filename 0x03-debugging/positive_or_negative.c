@@ -4,7 +4,7 @@
 
 /**
  * positive_or_negative - Entry point of the program
- * 0i : Integer
+ * @i : Integer
  *
  * Description: Determines pos, zero or neg.
  *
