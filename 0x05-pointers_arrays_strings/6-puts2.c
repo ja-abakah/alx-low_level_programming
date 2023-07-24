@@ -1,32 +1,28 @@
 #include "main.h"
+
 /**
- * main - Entry point of the program
+ * puts2 - Entry point of the program
  *
- * Description: Prints "_putchar" followed by a new line.
- *
+ * Description: Prints every pther character.
+ * @str: variable to be treated.
  * Return: 0 (Success)
  */
 
 void puts2(char *str)
 {
-int o, t, longi;
+int i, j;
 
-longi = 0;
-t = 0;
-char *y = str;
+j = 0;
 
-while (*y != '\0')
+while (str[j] != '\0')
 {
-y++;
-longi++;
+j++;
 }
-t = longi - 1;
-for (o = 0 ; o <= t ; o++)
+
+for (i = 0 ; i < j; i += 2)
 {
-if (o % 2 == 0)
-{
-_putchar(str[o]);
+_putchar(str[i]);
 }
-}
+
 _putchar('\n');
 }
