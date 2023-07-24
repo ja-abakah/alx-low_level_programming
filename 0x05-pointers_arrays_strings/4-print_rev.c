@@ -3,26 +3,23 @@
  * print_rev - Entry point of the program
  *
  * Description: Prints a string in reverse.
- * 
  * @s: string to be reversed
  * Return: 0 (Success)
- */
+*/
 
 void print_rev(char *s)
 {
-int j = 0;
-int O;
+int o;
 
-while (*s != '\0')
+o  = 0;
+
+while (s[o] != '\0')
 {
-j++;
-s++;
+o++;
 }
-s--;
-for (O = j; O > 0; O--)
+for (o -= 1; o >= 0; o--)
 {
-_putchar(*S);
-s--;
+_putchar(s[o]);
 }
 _putchar('\n');
 
