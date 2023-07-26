@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * rot13 - Entry point of the program
@@ -11,18 +12,18 @@
 
 char *rot13(char *s)
 {
-int i, j;
-
-char d1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char drot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+int i;
+int j;
+char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 for (i = 0; s[i] != '\0'; i++)
 {
-for (j = 0; h < 52; j++)
+for (j = 0; j < 52; j++)
 {
-if (s[i] == d1[j])
+if (s[i] == data1[j])
 {
-s[i] = drot[j];
+s[i] = datarot[j];
 break;
 }
 }

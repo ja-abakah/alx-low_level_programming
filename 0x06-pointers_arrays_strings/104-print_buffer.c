@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  *  print_buffer - Entry point of the program
@@ -12,41 +13,39 @@
 
 void print_buffer(char *b, int size)
 {
-int i, j, k, c;
-i = 0;
+int o, j, i;
+o = 0;
 
 if (size <= 0)
 {
-_putchar('\n');
+printf("\n");
 return;
 }
-while (i < size)
+while (o < size)
 {
-j = size - i < 10 ? size - i : 10;
-_putchar('%08x: ', i)
-
-for (k = 0; k < 10; k++)
+j = size - o < 10 ? size - o : 10;
+printf("%08x: ", o);
+for (i = 0; i < 10; i++)
 {
-if (k < j)
-_putchar('%02x', *(b + i + k));
+if (i < j)
+printf("%02x", *(b + o + i));
 else
-_putchar(' ');
-
-if (k % 2)
+printf("  ");
+if (i % 2)
 {
-_putchar(' ');
+printf(" ");
 }
 }
-for (k = 0; k < j; k++)
+for (i = 0; i < j; i++)
 {
-c = *(b + i + k);
+int c = *(b + o + i);
 if (c < 32 || c > 132)
 {
-_putchar('.');
+c = '.';
+
+printf("%c", c);
 }
-_putchar('%c', c);
-}
-_putchar('\n');
-i += 10;
+printf("\n");
+o += 10;
 }
 }
