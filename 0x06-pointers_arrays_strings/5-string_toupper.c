@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * main - Entry point of the program
+ * string_toupper - Entry point of the program
  *
- * Description: Prints "_putchar" followed by a new line.
+ * Description: Changes all lowercase letters to upper in a string.
+ * @str: string to be changed.
  *
  * Return: 0 (Success)
  */
 
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
 int j;
 
