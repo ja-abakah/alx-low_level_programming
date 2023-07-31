@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_diagsum - Entry of the program
+ * print_diagsums - Entry of the program
  * Description: The program prints the sum diagonals of a square matrix.
  * @a: The array.
  * @size: The input.
@@ -11,15 +11,20 @@
 
 void print_diagsums(int *a, int size)
 {
-int b, c, d, e;
+int sum1, sum2, y;
 
-d = 0;
-e = 0;
+sum1 = 0;
+sum2 = 0;
 
-for (b = 0; b <= (size * size); b = b + +1)
-d = d + a[b];
+for (y = 0; y < size; y++)
+{
+sum1 = sum1 + a[y * size + y];
+}
 
-for (c = size - 1; c <= (size * size) - size; c = c + size - 1)
-e = e + a[c]
-printf("%d, %d\n", d, e);
+for (y = size - 1; y >= 0; y--)
+{
+sum2 += a[y * size + (size - y - 1)];
+}
+
+printf("%d, %d\n", sum1, sum2);
 }

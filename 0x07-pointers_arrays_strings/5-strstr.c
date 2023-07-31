@@ -13,17 +13,17 @@ char *_strstr(char *haystack, char *needle)
 {
 for (; *haystack != '\0'; haystack++)
 {
-char *a = haystack;
-char *b = needle;
+char *l = haystack;
+char *p = needle;
 
-while (*a == *b && *b != '\0')
+while (*l == *p && *p != '\0')
 {
-a++;
-b++;
+l++;
+p++;
 }
 
-if (*b == '\0')
+if (*p == '\0')
 return (haystack);
 }
-return (NULL);
+return (0);
 }

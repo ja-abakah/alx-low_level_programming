@@ -6,7 +6,7 @@
  * @a: The array.
  * Return: 0 (success)
  */
-void print_chessboard(char (*a)[0])
+void print_chessboard(char (*a)[8])
 {
 int i, b;
 
