@@ -1,29 +1,29 @@
 #include "main.h"
 
 /**
- * _strpbrk - Entry point of the program
+ * _strstr - Entry point of the program
  * Description: Searches a string for any of a set of bytes.
- * @s: Pointer to the string to search.
- * @accept: Pointer to the string containing the set of bytes to search for.
+ * @haystack: Pointer to the string to search.
+ * @needle: Pointer to the string containing the occurrance to search for.
  *
  * Return: Pointer to the first occurrence in @s of any of the bytes in
  * @accept, or NULL if no such byte is found.
  */
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-while (*s)
+for (; *haystack != '\0'; haystack++)
 {
-char *a = accept;
+char *a = haystack;
+char *b = needle;
 
-while (*a)
+while (*a == *b && *b != '\0')
 {
-if (*s == *a)
-return (s);
 a++;
+b++;
 }
 
-s++;
+if (*b == '\0')
+return (haystack);
 }
-
 return (NULL);
 }
