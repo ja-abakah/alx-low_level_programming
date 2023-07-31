@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _strchr - Entry point of the program
  * Description: Locates the first occurrence of a character in a string.
@@ -18,5 +18,5 @@ for (i = 0; s[i] >= '\0'; i++)
 if (s[i] == c)
 return (s + 1);
 }
-return (NULL);
+return ('\0');
 }
