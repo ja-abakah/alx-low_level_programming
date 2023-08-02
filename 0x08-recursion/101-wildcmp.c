@@ -2,7 +2,8 @@
 
 /**
  * wildcmp - Entry point of the point
- * Description: Compares two strings and returns 1 if they can be considered identical.
+ * Description: Compares two strings and returns 1
+ * if they can be considered identical.
  * @s1: The first string to compare.
  * @s2: The second string to compare (can contain the special character '*').
  *
