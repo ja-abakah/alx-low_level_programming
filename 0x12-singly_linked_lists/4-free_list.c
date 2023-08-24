@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <srdlib.h>
+#include <stdlib.h>
 
 /**
  * free_list - Entrt of program

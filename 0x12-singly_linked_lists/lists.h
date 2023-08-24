@@ -1,7 +1,5 @@
 #ifndef LISTS_H
 #define LISTS_H
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * struct list_s - Entry of program
@@ -14,7 +12,7 @@
 typedef struct list_s
 {
 char *str;
-unsigned int len;
+unsigned int l;
 struct list_s *next;
 }list_t;
 

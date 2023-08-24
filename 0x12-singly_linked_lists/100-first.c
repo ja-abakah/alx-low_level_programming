@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void pre_main(void) __attribute__ ((constructor));
+
 /**
  * pre_main - Entry of program
  * Description: Prints the specified strings before main is executed.
