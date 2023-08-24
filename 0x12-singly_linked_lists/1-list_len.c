@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <string.h>
+#include <stdlib.h>
 
 /**
  * list_len - Entry of program
@@ -11,12 +11,11 @@
 size_t list_len(const list_t *h)
 {
 size_t c = 0;
-const list_t *cur = h;
 
-while (cur != NULL)
+while (h)
 {
 c++;
-cur = cur->next;
+h = h->next;
 }
 
 return (c);

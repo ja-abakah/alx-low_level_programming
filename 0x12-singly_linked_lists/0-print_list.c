@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <string.h>
+#include <stdio.h>
 
 /**
  * print_list - Entry of program
@@ -11,17 +11,15 @@
 size_t print_list(const list_t *h)
 {
 size_t c = 0;
-const list_t *cur = h;
 
-while (cur != NULL)
+while (h)
 {
-if (cur->str == NULL)
+if (!h->str)
 printf("[0] (nil)\n");
 else
-printf("[%d] %s\n", cur->len, cur->str);
-
+printf("[%u] %s\n", h->len, h->str);
+h = h->next;
 c++;
-cur = cur->next;
 }
 
 return (c);

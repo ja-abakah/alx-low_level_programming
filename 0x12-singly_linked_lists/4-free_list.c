@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <srdlib.h>
 
 /**
  * free_list - Entrt of program
@@ -11,11 +12,11 @@ void free_list(list_t *head)
 {
 list_t *cur;
 
-while (head != NULL)
+while (head)
 {
-cur = head;
-head = head->next;
-free(curt->str);
-free(cur);
+cur = head->next;
+free(head->str);
+free(head);
+head = cur;
 }
 }
