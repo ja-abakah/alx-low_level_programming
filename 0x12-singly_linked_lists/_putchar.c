@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 #include <unistd.h>
 /**
  * _putchar - Entry of the prototype

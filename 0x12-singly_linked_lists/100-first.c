@@ -1,11 +1,11 @@
 #include <stdio.h>
-
 void pre_main(void) __attribute__ ((constructor));
 
 /**
- * pre_main - Entry of program
- * Description: Prints the specified strings before main is executed.
+ * pre_main - Prints the specified strings before main is executed.
  *
+ * Description: This function prints two lines of text before the main
+ * function is executed.
  */
 
 void pre_main(void)
