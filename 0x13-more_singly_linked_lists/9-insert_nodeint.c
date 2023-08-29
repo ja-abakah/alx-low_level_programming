@@ -14,15 +14,16 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 /*new_n refers to the new nodet*/
-listint_t *new_n = malloc(sizeof(listint_t));
-listint_t *cur = *head;
 unsigned int c;
+listint_t *new_n;
+listint_t *cur = *head;
 
+new_n = malloc(sizeof(listint_t));
 if (!new_n || !head)
 return (NULL);
 
 new_n->n = n;
-nwq_n-next = NULL;
+new_n->next = NULL;
 
 if (idx == 0)
 {
@@ -32,7 +33,7 @@ return (new_n);
 }
 for (c = 0; cur && c < idx; c++)
 {
-if (c == idx -1)
+if (c == idx - 1)
 {
 new_n->next = cur->next;
 cur->next = new_n;

@@ -25,7 +25,7 @@ new_n->next = NULL;
 if (*head == NULL)
 {
 *head = new_n;
-return (new_n)
+return (new_n);
 }
 
 while (c->next)

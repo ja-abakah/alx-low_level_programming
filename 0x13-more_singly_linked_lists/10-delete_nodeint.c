@@ -23,16 +23,13 @@ if (index == 0)
 free(t);
 return (1);
 }
-
-while (i < index - 1)
+while (a < index - 1)
 {
 if (!t || !(t->next))
 return (-1);
 t = t->next;
 a++;
 }
-
-
 cur = t->next;
 t->next = cur->next;
 free(cur);

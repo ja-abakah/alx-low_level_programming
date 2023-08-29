@@ -11,9 +11,8 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-/*c refers to the count*/
-listint_t *cur = head;
 unsigned int c = 0;
+listint_t *cur = head;
 
 while (cur && c < index)
 {
