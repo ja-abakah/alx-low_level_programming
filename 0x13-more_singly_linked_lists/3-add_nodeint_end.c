@@ -12,10 +12,11 @@
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 /*new_n refers to the new node and allocation space for the the new node*/
-listint_t *new_n = malloc(sizeof(listint_t));
-listint_t *c;
+listint_t *new_n;
+listint_t *c = *head;
 
-if (new_n == NULL)
+new_n = malloc(sizeof(listint_t));
+if (!new_n)
 return (NULL);
 
 new_n->n = n;
@@ -24,11 +25,10 @@ new_n->next = NULL;
 if (*head == NULL)
 {
 *head = new_n;
+return (new_n)
 }
-else
-{
-c = *head;
-while (c->next != NULL)
+
+while (c->next)
 c = c->next;
 c->next = new_n;
 }

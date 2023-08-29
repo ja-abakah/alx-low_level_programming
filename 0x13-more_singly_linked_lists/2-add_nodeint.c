@@ -14,7 +14,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 /*new_n refers to the new node*/
 listint_t *new_n = malloc(sizeof(listint_t));
 
-if (new_n == NULL)
+if (!new_n)
 return (NULL);
 
 new_n->n = n;

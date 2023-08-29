@@ -13,10 +13,11 @@ listint_t *c;
 if (head == NULL)
 return;
 
-while (*head != NULL)
+while (*head)
 {
-c = *head;
-*head = (*head)->next;
-free(c);
+c = (*head)->next;
+free(*head);
+*head = c;
 }
+*head = NULL;
 }
