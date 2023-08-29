@@ -31,7 +31,6 @@ return (new_n)
 while (c->next)
 c = c->next;
 c->next = new_n;
-}
 
 return (new_n);
 }

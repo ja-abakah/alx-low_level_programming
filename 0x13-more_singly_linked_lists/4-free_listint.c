@@ -13,7 +13,7 @@ listint_t *c;
 while (head)
 {
 c = head->next;
-free (head);
+free(head);
 head = c;
 }
 }
