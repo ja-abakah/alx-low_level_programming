@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * get_nodeint_at_index - Entry of program
@@ -14,11 +15,14 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 unsigned int c = 0;
 listint_t *cur = head;
 
-while (cur && c < index)
+while (cur != NULL)
 {
-cur = cur->index;
+if (c == index)
+return (cur);
+
 c++;
+cur = cur->index;
 }
 
-return (cur ? cur : NULL);
+return (NULL);
 }

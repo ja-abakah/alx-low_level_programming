@@ -16,10 +16,10 @@ listint_t *t;
 if (!h || !*h)
 return (0);
 
-while (*h)
+while (*h != NULL)
 {
-d = *h - (*h)->next;
-if (d > 0)
+d = (intptr_t)*h - (intptr_t)(*h)->next;
+if (d > (intptr_t)sizeof(listint_t))
 {
 t = (*h)->next;
 free(*h);
@@ -28,8 +28,9 @@ l++;
 }
 else
 {
+t = (*h)->next;
 free(*h);
-*h = NULL;
+*h = t;
 l++;
 break;
 }
