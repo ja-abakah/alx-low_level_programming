@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * flip_bits - Entry of program
