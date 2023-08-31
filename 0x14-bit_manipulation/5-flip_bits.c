@@ -11,13 +11,15 @@ include "main.h"
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned long int i = n ^ m;
-unsigned int c = 0;
+int i, c = 0;
+unsigned long int cur;
+unsigned long int j = n ^ m;
 
-while (i)
+for (i = 63; i >= 0; i--)
 {
-c += i & 1;
-i >>= 1;
+cur = j >> i;
+if (cur & 1)
+c++;
 }
 
 return (c);
