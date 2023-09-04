@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *create_buffer(char *file);
-void close_file(int fd);
+void close_file(int f);
 
 /**
  * create_buffer - Entry of program
