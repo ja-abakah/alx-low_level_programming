@@ -21,7 +21,7 @@ b = malloc(sizeof(char) * 1024);
 if (b == NULL)
 {
 dprintf(STDERR_FILENO,
-"Error: Cannot write to %s\n", file);
+"Error: Can't write to %s\n", file);
 exit(99);
 }
 
@@ -41,7 +41,7 @@ i = close(f);
 
 if (i == -1)
 {
-dprintf(STDERR_FILENO, "Error: Cannot close f %d\n", f);
+dprintf(STDERR_FILENO, "Error: Can't close f %d\n", f);
 exit(100);
 }
 }
@@ -75,7 +75,7 @@ do {
 if (f == -1 || a == -1)
 {
 dprintf(STDERR_FILENO,
-"Error: Cannot read from file %s\n", argv[1]);
+"Error: Can't read from file %s\n", argv[1]);
 free(b);
 exit(98);
 }
@@ -83,7 +83,7 @@ b = write(t, b, a);
 if (t == -1 || b == -1)
 {
 dprintf(STDERR_FILENO,
-"Error: Cannot write to %s\n", argv[2]);
+"Error: Can't write to %s\n", argv[2]);
 free(b);
 exit(99);
 }
