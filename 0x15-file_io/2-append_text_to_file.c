@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * append_text_to_file - Entry of program 
+ * append_text_to_file - Entry of program
  * Description: Appends text at the end of a file.
  * @filename: file to append to.
  * @text_content: The content to append.
