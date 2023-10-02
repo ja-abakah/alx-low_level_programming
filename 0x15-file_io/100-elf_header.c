@@ -8,6 +8,14 @@
 
 #define BUF_SIZE 64
 
+void display_elf_header(Elf64_Ehdr *header)
+Void print_data(unsigned char *e_ident)
+Void print_class(unsigned char *e_ident)
+void print_version(unsigned char *e_ident)
+void print_abi(unsigned char *e_ident)
+void error_exit(const char *msg)
+
+
 /**
  * error_exit - Entry of Program
  * Description: Print an error message to stderr and exit with a status code.
@@ -26,12 +34,20 @@ exit(98);
  */
 void display_elf_header(Elf64_Ehdr *header)
 {
-int i; 
+Int i;
 printf("  Magic:   ");
 for (i = 0; i < EI_NIDENT; i++)
 printf("%02x ", header->e_ident[i]);
 printf("\n");
+}
 
+/**
+ * print_class - Entry of program
+ * Description: Prints the class of ELF header.
+ * @e_ident: A pointer containing the ELF class.
+ */
+Void print_class(unsigned char *e_ident)
+{
 printf("  Class:                             ");
 switch (header->e_ident[EI_CLASS])
 {
@@ -43,9 +59,15 @@ printf("ELF64\n");
 break;
 default:
 printf("Invalid\n");
-break;
 }
-
+}
+/**
+ * print_data - Entry of program
+ * Description: Prints the data of ELF
+ * @e_ident: A pointer containing the ELF class.
+ */
+Void print_data(unsigned char *e_ident)
+{
 printf("  Data:                              ");
 switch (header->e_ident[EI_DATA])
 {
@@ -57,10 +79,17 @@ printf("2's complement, big-endian\n");
 break;
 default:
 printf("Invalid\n");
-break;
 }
+}
+/**
+ * print_version - Entry of program
+ * Description: Prints a version of an ELF
+ * @e_ident: A pointer containing the ELF version.
+ */
 
-printf("  Version:                           %d (current)\n", header->e_ident[EI_VERSION]);
+void print_version(unsigned char *e_ident)
+{
+printf("  Version:        %d (current)\n", header->e_ident[EI_VERSION]);
 
 printf("  OS/ABI:                            ");
 switch (header->e_ident[EI_OSABI])
@@ -73,10 +102,16 @@ printf("UNIX - Linux\n");
 break;
 default:
 printf("Other\n");
-break;
 }
-
-printf("  ABI Version:                       %d\n", header->e_ident[EI_ABIVERSION]);
+}
+/**
+ * print_abi - Entry of program
+ * Description: prints a version of ELF header.
+ * @e_ident: A pointer containing the ELF ABI version.
+ */
+void print_abi(unsigned char *e_ident)
+{
+printf("  ABI Version:       %d\n", header->e_ident[EI_ABIVERSION]);
 
 printf("  Type:                              ");
 switch (header->e_type)
@@ -101,9 +136,19 @@ printf("Other\n");
 break;
 }
 
-printf("  Entry point address:               0x%lx\n", (unsigned long)header->e_entry);
+
+printf("  Entry point address:    0x%lx\n", (unsigned long)header->e_entry);
 }
 
+/**
+ * main - Entry of program
+ * Descriptin: Displays the content the
+ * ELF header at the start of an ELF file.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: 0 on success.
+ */
 int main(int argc, char *argv[])
 {
 int fd;
@@ -131,4 +176,3 @@ close(fd);
 
 return (0);
 }
-
